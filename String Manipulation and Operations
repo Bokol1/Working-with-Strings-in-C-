@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string greeting = "Hello, ";
+    std::string name = "Alice";
+
+    // Concatenating strings
+    std::string message = greeting + name + "! Welcome to C++ Programming.";
+
+    // String length
+    std::cout << "Length of message: " << message.length() << std::endl;
+
+    // Substring extraction
+    std::string sub = message.substr(7, 5); // Extracts 5 characters starting from index 7
+    std::cout << "Substring: " << sub << std::endl;
+
+    // Finding a character in string
+    char search = 'o';
+    size_t found = message.find(search);
+    if (found != std::string::npos) {
+        std::cout << "Found '" << search << "' at position " << found << std::endl;
+    } else {
+        std::cout << "Not found." << std::endl;
+    }
+
+    return 0;
+}
